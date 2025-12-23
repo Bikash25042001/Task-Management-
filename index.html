@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collaborative Task Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          darkMode: 'class',
+        }
+    </script>
+</head>
+<body class="dark:bg-gray-900">
+<nav class="flex justify-between items-center bg-white px-6 py-4 shadow">
+  <h3 class="text-xl font-bold text-gray-800">
+    Task Manager
+  </h3>
+  <div class="flex items-center gap-4">
+    <button onclick="toggleDarkMode()" class="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800">
+      Dark Mode
+    </button>
+    <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+      Login
+    </button>
+  </div>
+</nav>
+
+<section class="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900">
+  <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow w-full max-w-sm">
+    
+    <h2 class="text-2xl font-semibold text-center text-gray-800 dark:text-gray-200 mb-6">
+      Login Here
+    </h2>
+
+    <div class="mb-4">
+      <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        Email
+      </label>
+      <input
+        type="email"
+        placeholder="Enter email"
+        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600"
+      />
+    </div>
+
+    <div class="mb-6">
+      <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        Password
+      </label>
+      <input
+        type="password"
+        placeholder="Enter password"
+        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600"
+      />
+    </div>
+    <button class="w-full bg-blue-500 text-black py-2 rounded-md hover:bg-blue-700">
+      Login
+    </button>
+  </div>
+</section>
+
+    <section class="max-w-6xl mx-auto mt-10 px-4">
+        <h2 class="text-2xl font-bold mb-6">Dashboard</h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+                <h3 class="font-semibold text-lg">Design Login Page</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                    Create a responsive login UI.
+                </p>
+                <span class="inline-block mt-3 px-3 py-1 text-sm bg-yellow-200 text-yellow-800 rounded">
+          Pending
+        </span>
+            </div>
+
+            <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+                <h3 class="font-semibold text-lg">Build Dashboard</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                    Show tasks assigned to users.
+                </p>
+                <span class="inline-block mt-3 px-3 py-1 text-sm bg-green-200 text-green-800 rounded">
+          Completed
+        </span>
+            </div>
+            <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+                <h3 class="font-semibold text-lg">Task Management</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                    Create, edit and delete tasks.
+                </p>
+                <span class="inline-block mt-3 px-3 py-1 text-sm bg-yellow-200 text-yellow-800 rounded">
+          Pending
+        </span>
+            </div>
+        </div>
+    </section>
+
+
+  <script>
+        function toggleDarkMode() {
+          document.documentElement.classList.toggle('dark');
+        }
+    </script>
+</body>
+</html>
